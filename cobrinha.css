@@ -1,4 +1,4 @@
-body {
+ body {
 	margin: 0;
 }
 
@@ -14,32 +14,29 @@ body {
 }
 
 #jogo {
-	position: fixed;
-	/*left: 0;
-	right: 0;
-	top: 20%;
-	bottom: 0;*/
+	position: absolute;
+	top: 200px;
 	margin: auto;
-	width: 505px;
-	height: 505px;
+	width: 500px;
+	height: 500px;
 	background: #C0C0C0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	border: solid;
+	border-color: #C0C0C0;
 }
 
 #score {
-	position: fixed;
+	position: absolute;
 	margin-bottom: 15px;
 	border: solid;
 	border-color: #C0C0C0;
 	width: 500px;
 	height: 45px;
 	background: black;
-	/*left: 50%;
-	top: 18%;*/
-	transform: translate(-50%);
+	top: 145px;
 }
 @font-face {
   font-family: "Poxel";
@@ -54,33 +51,28 @@ body {
     color: #C0C0C0;
     margin: auto;
  	font-family: "Poxel";
+	width: auto;
 }
 #titulo{
 	font-family: "Poxel";
 	font-size: 50px;
 	color: #C0C0C0;
 	position: absolute;
-	width: 505px;
-	left: 51%;
-	transform: translate(-50%);
+	top: 10px;
+	width: auto;
 }
 #nomes{
 	font-family: "Poxel";
 	font-size: 20px;
 	color: #C0C0C0;
 	position: absolute;
-	width: 505px;
-	left: 50%;
-	bottom: 1%;
-	transform: translate(-50%,-50%);
+	top: 900px;
 }
 #data{
 	font-family: "Poxel";
 	font-size: 20px;
 	color: #C0C0C0;
 	position: absolute;
-	width: 505px;
-	left: 20%;
-	bottom: 1%;
-	transform: translate(-50%,-50%);
+	left: 20px;
+	top: 900px;
 }
