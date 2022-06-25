@@ -51,6 +51,7 @@ function campo() {  //Função para desenhar o campo onde a cobra irá andar.
 }
 function vitoria(){ //Função que determina quando o usuário ganha o jogo.
    pontos = 0;
+   velocidade = "Velocidade: baixa";
    rabo = 2;
    xm = 112.5;
    ym = 112.5;
@@ -75,6 +76,7 @@ function vitoria(){ //Função que determina quando o usuário ganha o jogo.
 }
 function derrota(){ //Função que determina quando o usuário perde o jogo.
     pontos = 0;
+    velocidade = "Velocidade: baixa";
     rabo = 2;
     xm = 112.5;
     ym = 112.5;
@@ -164,10 +166,12 @@ function atualizaTela() { //Função que irá atualizar na quantidade de milisse
             pontos+=10;
         }
         if(pontos == 100){
+            velocidade = "Velocidade: media";
             clearInterval(intervalo);
             intervalo = setInterval(atualizaTela, 90);
         }
         if(pontos == 300){
+            velocidade = "Velocidade: alta";
             clearInterval(intervalo);
             intervalo = setInterval(atualizaTela, 60);
         }
@@ -192,6 +196,7 @@ function atualizaTela() { //Função que irá atualizar na quantidade de milisse
         }
     }
     mostrarPontos.textContent = ("Pontos: "+pontos);//Atualizando os pontos na tela.
+    mostrarVel.textContent = (velocidade);//Atualizando a velocidade na tela.
     desenhaMaca(xm,ym);
 }
 function leDoTeclado(evento) { //Função que lê as teclas, direcionando a cobra na tela.
@@ -217,7 +222,9 @@ function leDoTeclado(evento) { //Função que lê as teclas, direcionando a cobr
 var tela = document.querySelector("canvas"); //Busca o elemento canvas para usar no js.
 var pincel = tela.getContext("2d"); //Usa a variável "tela" para desenhar no canvas.
 var mostrarPontos = document.getElementById("pontos"); //Busca um elemento do HTML para atualizarmos na tela usando js.
+var mostrarVel = document.getElementById("velocidade"); //Busca um elemento do HTML para atualizarmos na tela usando js.
 var pontos = 0; //Pontos do jogo.
+var velocidade = "Velocidade: baixa"; //Mostra a velocidade na tela.
 var rastro = []; //Corpo da cobra.
 var rabo = 2; //Determina o tamanho do rabo da cobra.
 var xm = 112.5; //Posição X da maçã.
@@ -226,7 +233,7 @@ var x = 237.5; //Posição X da cabeça da cobra.
 var y = 287.5;  //Posição Y da cabeça da cobra.
 var sentidoH; //Determinará se a cobra estiver se movimentando no sentido horizontal.
 var direcao; //Deternubará a direção da cobra no campo, cima, baixo, esquerda e direita. 
-
+ 
 //Variáveis para auxiliar na movimentação correta da cobra.
 var esquerda = false;
 var cima = false;

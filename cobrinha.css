@@ -7,7 +7,7 @@ body {
 	background-color:#000;
 }
 
-#fundo {
+.fundo {
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
@@ -32,7 +32,7 @@ body {
 	border-color: #C0C0C0;
 }
 
-#score {
+.score {
 	position: absolute;
 	margin-bottom: 15px;
 	border: solid;
@@ -48,15 +48,32 @@ body {
 }
 
 #pontos{
-	left: 50%;
+	top: 15%;
+	position: absolute;
+	left: 0%;
 	transform: translate(25%);
-	font-size: 40px;
+	font-size: 30px;
 	margin-bottom: 0px;
   color: #C0C0C0;
   margin: auto;
  	font-family: "Poxel";
 	width: auto;
 }
+#velocidade{
+	top: 15%;
+	position: absolute;
+	right: 16%;
+	transform: translate(25%);
+	font-size: 30px;
+	margin-bottom: 0px;
+  color: #C0C0C0;
+  margin: auto;
+ 	font-family: "Poxel";
+	width: auto;
+}
+
+
+
 #titulo{
 	font-family: "Poxel";
 	font-size: 50px;
