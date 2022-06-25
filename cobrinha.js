@@ -51,7 +51,7 @@ function campo() {  //Função para desenhar o campo onde a cobra irá andar.
 }
 function vitoria(){ //Função que determina quando o usuário ganha o jogo.
    pontos = 0;
-   velocidade = "Velocidade: baixa";
+   velocidade = "Velocidade: Baixa";
    rabo = 2;
    xm = 112.5;
    ym = 112.5;
@@ -76,7 +76,7 @@ function vitoria(){ //Função que determina quando o usuário ganha o jogo.
 }
 function derrota(){ //Função que determina quando o usuário perde o jogo.
     pontos = 0;
-    velocidade = "Velocidade: baixa";
+    velocidade = "Velocidade: Baixa";
     rabo = 2;
     xm = 112.5;
     ym = 112.5;
@@ -166,12 +166,12 @@ function atualizaTela() { //Função que irá atualizar na quantidade de milisse
             pontos+=10;
         }
         if(pontos == 100){
-            velocidade = "Velocidade: media";
+            velocidade = "Velocidade: Media";
             clearInterval(intervalo);
             intervalo = setInterval(atualizaTela, 90);
         }
         if(pontos == 300){
-            velocidade = "Velocidade: alta";
+            velocidade = "Velocidade: Alta";
             clearInterval(intervalo);
             intervalo = setInterval(atualizaTela, 60);
         }
@@ -224,7 +224,7 @@ var pincel = tela.getContext("2d"); //Usa a variável "tela" para desenhar no ca
 var mostrarPontos = document.getElementById("pontos"); //Busca um elemento do HTML para atualizarmos na tela usando js.
 var mostrarVel = document.getElementById("velocidade"); //Busca um elemento do HTML para atualizarmos na tela usando js.
 var pontos = 0; //Pontos do jogo.
-var velocidade = "Velocidade: baixa"; //Mostra a velocidade na tela.
+var velocidade = "Velocidade: Baixa"; //Mostra a velocidade na tela.
 var rastro = []; //Corpo da cobra.
 var rabo = 2; //Determina o tamanho do rabo da cobra.
 var xm = 112.5; //Posição X da maçã.
