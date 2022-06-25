@@ -80,6 +80,8 @@ body {
 	left: 20px;
 	top: 850px;
 }
+
+/*Códigos .swal para interagir com a biblioteca sweet alert 2, para deixar os alertas mais agradáveis.*/
 .swal2-title {
   font-family: Poxel;
 }
